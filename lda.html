@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Primeros pasos con Regresión logística</h2>
+            <div class="line-dec"></div>
+            <span>Aplicación del algoritmo de regresión logística con el dataset de cardiac.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>                  
+                  <li><a href="assets/resources/housing.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Cardiac Scoring CSV</a></li>
+                  <li><a href="assets/resources/housing.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Cardiac Training CSV</a></li>                  
+                </ul>
+                
+                <h4 class="text-dark">Problema.</h4>
+                <p class="text-dark">
+                  El problema consiste en predecir si una persona va a tener un segundo ataque cardíaco en base a parámetros como colesterol, estrés , etc .<br>
+                </p>
+
+                <h4 class="text-dark">Parámetros.</h4>
+                <p class="text-dark">                  
+                  Se trata de dos colección de datos una se scoring con 690 registros y una de training con 138 registros
+                </p>                  
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Edad</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La edad en años redondeada al entero más cercano.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Estado_civil</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Codificado mediante un número: 0 = soltero; 1 = casado, 2 = divorciado y 3 = viudo.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Sexo</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El sexo del individuo, 0 = femenino; 1= masculino.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Categoria_Peso</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El peso de la persona, categorizado en uno de tres posibles niveles: 0 = normal; 1 = sobrepeso; 2 = obeso.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Colesterol</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Nivel de colesterol de la persona, tal como se ha registrado en el momento del tratamiento indicado cuando su más reciente ataque al corazón
+</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Manejo_stress</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Un atributo binario que indica si el paciente ha participado previamente de cursos de manejo del estrés: 0 = no; 1 = si.             
+                    </p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Trat_ansiedad</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Valor entre 0 y 100 indicativo del nivel de estrés de cada persona ,los valores están tabulados en incrementos de 5.<br>                    
+                    </p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> 2do_Ataque_Corazon </h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Es la variable objetivo, "SI" para aquellos individuos que han sufrido un segundo ataque al corazón, "no" en caso contrario.<br>
+                    </p>                                       
+                </div>                                                
+                <h5 class="text-dark">Trabajando con el dataset en Rapidminer.</h5>
+                <p class="text-dark">
+                  Primero importamos el dataset de entrenamiento, utilizando el operador ReadCSV, seteamos los tipos y el parámetro objetivo.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/read_csv_tr.jpg" alt="" />
+                </div>                
+                <p class="text-dark">
+                  Observamos las estadísticas de los datos, destacamos que es un dataset curado por lo que no observamos missing values, las distribuciones de los atributos se asemejan bastante a la distribución normal. 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/datos_estadisticas.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  A continuación utilizamos el modelo de regresión logística mediante el operador "Logistic Regression", si conectamos la salida del modelo y ejecutamos el proyecto podemos observar los coeficientes y estadísticas del modelo entrenado.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/modelo_estadisticas.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Podemos apreciar que el estado civil y la categoría están generando un problema, esto puede deberse a que las variables son nominales por lo que las transformaremos a categóricas y luego aplicaremos One-Hot encoding para poder utilizarlas en nuestro modelo y observamos las nuevas estadísticas  
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/modelo_estadisticas2.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                    Ya estamos listos para aplicar el modelo con los datos de scoring, asi que los importamos y aplicamos el modelo con "Apply Model", es importante generar los cambios que hicimos en el dataset de entrenamiento en el dataset de scoring.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/proyecto.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Corremos el proyecto y observamos que se generaron 2 atributos nuevos que representan la confianza de la predicción
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/regresion_logistica/res.jpg" alt="" />                    
+                </div>                
+                <p class="text-dark">
+                  Podemos concluir que el grado de predicción es muy bueno, pero hay que prestar especial atención a los falsos negativos ya que en estos casos los pacientes no recibirían los cuidados necesarios para prevenir el verdadero resultado que los llevaría a un 2do ataque cardíaco, en el caso de los falsos negativos el cuidado de los pacientes seria innecesario pero aun así sobrevivirían.
+                </p>
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

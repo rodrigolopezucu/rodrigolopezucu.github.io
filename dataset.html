@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Primeros pasos con un DATASET</h2>
+            <div class="line-dec"></div>
+            <span>Análisis de parámetros, etiquetas y valores estadísticos importantes.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>
+                  <li><a href="assets/resources/iris.names" target="_blank" download><i class="fa fa-list" aria-hidden="true"></i></i>Iris names</a></li>
+                  <li>   </li>
+                  <li><a href="assets/resources/iris.data" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Iris data</a></li>
+                  <li>   </li>
+                  <li><a href="assets/resources/iris.xlsx" target="_blank" download><i class="fa fa-file-excel-o" aria-hidden="true"></i>Iris Excel</a></li>                  
+                </ul>
+                
+                <h4 class="text-dark">Parámetros.</h4>
+                <p class="text-dark">
+                  Utilizaremos el dataset de IRIS proporcionado por UCI.<br>
+                  Se trata de una coleccion de datos recolectados sobre el genero de plantas "Iris", el mismo esta compuesto por 150 registros divididos en 3 clases de planta distintos, por cada clase existen 50 registros con los siguientes parámetros.<br>
+                </p>  
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Sepal length</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La longitud del sépalo medida en centímetros.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Sepal width</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El ancho del sépalo medido en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Petal length</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La longitud del pétalo medida en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Petal width</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El ancho del pétalo medido en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Class</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La clase Iris a la que pertenece la planta.<br>
+                    -Iris Setosa<br>
+                    -Iris Versicolour<br>
+                    -Iris Virginica 
+                    </p>
+                </div>                
+                <h4 class="text-dark">Datos estadísticos.</h4>
+                <p class="text-dark">
+                  El primer recurso que utlizamos es una planilla electrónica típica en la que podemos calcular datos como la media y la desviación estandar para cada uno de los parámetros del dataset, en este caso utilizamos un complento que proporciona excel para obtener varios datos estadisticos, pero tambien podriamos calcularlos de forma manual.
+                </p>
+                <h5 class="text-dark">Importando datos.</h5>
+                <p class="text-dark">
+                  Es importante prestar mucha atencion a la codificación de los datos así como el formato que tienen originialmente, en este caso el dataset está separado por cómas y el separador decimal es un punto por lo tanto necesitamos efectuar varias transformaciones para que los datos no queden en una unidad incorrecta.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/data_excel_tr.jpg" alt="Excel" />                    
+                </div>
+                <h5 class="text-dark">Obtenemos la información.</h5>
+                <p class="text-dark">
+                  Luego de las transformaciones podemos obtener las estadísticas para cada parámetro.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/data_excel.jpg" alt="Excel" />                    
+                </div>
+
+                <h4 class="text-dark">Otras Herramientas.</h4>
+                <p class="text-dark">
+                  Existen muchas herramientas para trabajar con nuestros datasets, a continuación realizaremos los cálculos estadísticos utilizando RAPIDMINER.                  
+                </p>
+                <h5 class="text-dark">Nuevo proyecto con dataset iris.</h5>
+                <p class="text-dark">
+                  Generamos un nuevo proyecto en blanco y utilizamos el dataset de IRIS proporcionado por el propio RAPIDMINER.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset.jpg" alt="" />                    
+                </div>
+
+                <h5 class="text-dark">Análisis de parámetros.</h5>
+                <p class="text-dark">
+                  En la salida podemos observar que hay parámetros sin nombre y un parámetro adicional de ID el cual descartaremos ya que no aporta valor.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_salida.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Renombramos los parámetros y descartamos la id utilizando los operadores Rename y Select Attributes.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_operadores.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_selatt.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_ren.jpg" alt="" />                    
+                </div>
+                
+                <p class="text-dark">
+                  Observamos los cambios que realizamos en el dataset en la salida así como la distinción del parametro objetivo(la clase en color verde) .
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_salida_modif.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Finalmente observamos los datos estadísticos los cuales coinciden con los calculados en la planilla electrónica.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_salida_est.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Si estamos interesados en mas datos estadísticos podemos utilizar el operador Aggregate que nos permite obtener datos más particulares de cada parámetro.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_operadores2.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_agr.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/dataset/rapid_dataset_salida_agr.jpg" alt="" />                    
+                </div>
+
+
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

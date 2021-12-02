@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <section class="section about-me" data-section="section1">
+      <section id="section1" class="section about-me" data-section="section1">
         <div class="container">
           <div class="section-heading">
             <h2>Quien soy ?</h2>
@@ -57,7 +57,7 @@
                   <h4>Perfil</h4>
                   <p>
                     Mi nombre es Rodrigo López, soy alumno de la Universidad Católica del Uruguay<br> 
-              Actualmente estoy cursando la carrera de Ingeniería en Informatica, soy de la generacion 2018 y este es mi 4to año en la facultad..
+              Actualmente estoy cursando la carrera de Ingeniería en Informática, soy de la generación 2018 y este es mi 4to año en la facultad..
                   </p>                  
                 </div>
               </div>
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="section my-work" data-section="section3">
+      <section id="section3" class="section my-work" data-section="section3">
         <div class="container">
           <div class="section-heading">
             <h2>Trabajos</h2>
@@ -91,29 +91,97 @@
                   <input type="radio" data-type="algoritmos-nolineales" name="isotope-filter"/>
                   <span>Algoritmos No-Lineales</span>
                 </label>
+                <label>
+                  <input type="radio" data-type="clustering" name="isotope-filter"/>
+                  <span>Clustering</span>
+                </label>
+                <label>
+                  <input type="radio" data-type="ensambles" name="isotope-filter"/>
+                  <span>Ensambles</span>
+                </label>
+                <label>
+                  <input type="radio" data-type="casos-estudio" name="isotope-filter"/>
+                  <span>Casos de estudio</span>
+                </label>
               </form>
-              <div class="isotope-box">
-                <div class="isotope-item" data-type="algoritmos-lineales">
+              <div class="isotope-box">               
+
+                <div class="isotope-item" data-type="datos">
                   <figure class="snip1321">
-                    <img src="assets/images/modelo.jpg" alt="sq-sample26"/>
+                    <img src="assets/images/dataset.jpg" alt="Dataset" />
                     <figcaption>
-                      <a href="#"><i class="fa fa-link"></i></a>
-                      <h4>Titulo</h4>
-                      <span>Descripcion</span>
+                      <a href="dataset.html"><i class="fa fa-link"></i></a>
+                      <h4>Primeros pasos con un DATASET</h4>
+                      <span>Análisis de parámetros, etiquetas y valores estadísticos importantes.</span>
                     </figcaption>
                   </figure>
                 </div>
 
                 <div class="isotope-item" data-type="datos">
                   <figure class="snip1321">
+                    <img src="assets/images/dataset_titanic.jpg" alt="Dataset" />
+                    <figcaption>
+                      <a href="dataset_titanic.html"><i class="fa fa-link"></i></a>
+                      <h4>Dataset Titanic</h4>
+                      <span>Análisis y depuración del dataset de titanic proporcionado por data.world.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="datos">
+                  <figure class="snip1321">
+                    <img src="assets/images/data_prep.jpg" alt="Preparar los datos" />
+                    <figcaption>
+                      <a href="data_prep.html"><i class="fa fa-link"></i></a>
+                      <h4>Preparando los datos</h4>
+                      <span>Técnicas aplicadas a los dataset con problemas como los datos faltantes, outliers, etc.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="algoritmos-lineales">
+                  <figure class="snip1321">
                     <img
-                      src="assets/images/data_prep.jpg"
+                      src="assets/images/regresion_lineal.jpg"
                       alt="sq-sample26"
                     />
                     <figcaption>
-                      <a href="data_prep.html"><i class="fa fa-link"></i></a>
-                      <h4>Preparación de datos</h4>
-                      <span>Tecnicas aplicadas a los dataset con problemas como datos faltantes.</span>
+                      <a href="regresion_lineal.html"><i class="fa fa-link"></i></a>
+                      <h4>Primeros pasos con Regresión lineal</h4>
+                      <span>Aplicación del algoritmo de regresión lineal con el dataset de housing.</span>
+                    </figcaption>
+                  </figure>
+                </div>               
+
+                <div class="isotope-item" data-type="algoritmos-lineales">
+                  <figure class="snip1321">
+                    <img src="assets/images/regresion_logistica.jpg" alt="sq-sample26"/>
+                    <figcaption>
+                      <a href="regresion_logistica.html"><i class="fa fa-link"></i></a>
+                      <h4>Primeros pasos con Regresión logistica</h4>
+                      <span>Aplicación del algoritmo de regresión logística con el dataset de cardiac.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="algoritmos-lineales">
+                  <figure class="snip1321">
+                    <img src="assets/images/lda.jpg" alt="sq-sample26"/>
+                    <figcaption>
+                      <a href="lda.html"><i class="fa fa-link"></i></a>
+                      <h4>LDA(Linear Discriminant analysis)</h4>
+                      <span>Aplicación del algoritmo lda en el dataset de predicción de deportes.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="casos-estudio">
+                  <figure class="snip1321">
+                    <img src="assets/images/caso1.jpg" alt="sq-sample26"/>
+                    <figcaption>
+                      <a href="caso1.html"><i class="fa fa-link"></i></a>
+                      <h4>Altura de un humano en base a sus restos oseos</h4>
+                      <span>Un problema de regresion que busca predecir la altura de un humano en base a sus restos oseos.</span>
                     </figcaption>
                   </figure>
                 </div>
@@ -133,40 +201,9 @@
                     </figcaption>
                   </figure>
                 </div>
+                
 
-                <div class="isotope-item" data-type="datos">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/ml.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="#"                        
-                        ><i class="fa fa-link"></i
-                      ></a>
-                      <h4>Titulo</h4>
-                      <span>Descripcion</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="algoritmos-lineales">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/ml.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="#"                      
-                        ><i class="fa fa-link"></i
-                      ></a>
-                      <h4>Titulo</h4>
-                      <span>Descripcion</span>
-                    </figcaption>
-                  </figure>
-                </div>
+                
 
                 <div class="isotope-item" data-type="algoritmos-nolineales">
                   <figure class="snip1321">
@@ -187,7 +224,7 @@
         </div>
       </section>
 
-      <section class="section contact-me" data-section="section4">
+      <section id="section4" class="section contact-me" data-section="section4">
         <div class="container">
           <div class="section-heading">
             <h2>Contacto</h2>

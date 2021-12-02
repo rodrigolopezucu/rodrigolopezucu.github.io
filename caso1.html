@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Altura de un humano en base a sus restos óseos</h2>
+            <div class="line-dec"></div>
+            <span>Un problema de regresión que busca predecir la altura de un humano en base a sus restos óseos.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>                  
+                  <li><a href="assets/resources/Dataindsamling.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Dataindsamling CSV</a></li>                  
+                </ul>
+                
+                <h4 class="text-dark">Problema.</h4>
+                <p class="text-dark">
+                  El problema consiste en predecir la altura de un humano en base a datos sobre sus restos óseos.<br>
+                </p>
+
+                <h4 class="text-dark">Parámetros.</h4>
+                <p class="text-dark">
+                Es un conjunto de datos recolectados en el pueblo Ribe de Dinamarca como parte de un proyecto de biomedicina en la University of Southern Denmark, titulado “Heigh Estimation from Skeletal Remains”, cuyo autor es Mette Wod. Los restos datan alrededor de los años 1200 a 1400, se excavaron un total de 429 tumbas de las cuales se pudieron medir la altura en tumba de 184 individuos, de estos 184 se seleccionaron los adultos resultando en 114 individuos, 67 son hombres y 47 mujeres, se utilizo un método confiable para realizar las medidas(método de Boldsen)<br>
+                Varios de los parámetros que desarrollaremos a continuación son exigidos por el manual "HUMAN OSTEOLOGICAL METHODS" y no tienen relevancia en el estudio que realizaremos.<br>
+                </p>                
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> ID</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Un identificador de registro</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Location</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El pueblo del que se recolectaron los restos</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Site_Number</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Según el manual métodos de osteología en combinación con la locación, se utiliza para identificar unequivocamente el lugar del que se retiraron los restos</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Age_Minumum</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Cota inferior del intervalo de edad estimado según el manual de métodos de osteología.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Age_Maximum</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Cota superior del intervalo de edad estimado según el manual de métodos de osteología.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Sex</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El sexo del individuo determinado según una escala de 7 puntos descrita en el manual de metodos de osteología</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Grave Number</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Es el sistema de numeración de las tumbas, como regla principal un esqueleto encontrado en una tumba debe tener un identificador que comience con 'G' seguido de un número .</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Canine number</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El número de hipoplasias visibles en el diente canino</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Canine largest age</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark"> La edad a la que se formo la hipoplasia mas grande en el canino</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Canine 2nd largest age</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La edad a la que se formo la segunda hipoplasia mas grande en el canino</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Incisor number</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El número de hipoplasias visibles en el diente incisivo</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Incisor largest age</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La edad a la que se formo la hipoplasia mas grande en el incisivo</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Incisor 2nd largest age</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La edad a la que se formo la segunda hipoplasia mas grande en el incisivo</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Height in grave ( Nuestra variable objetivo )</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La altura en tumba, medido durante la excavación utilizando el método de Boldsen</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Abnormalities Vertebras</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Notas sobre anormalidades en las vertebras que podrían impactar en la altura del individuo.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Femur left</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El largo máximo del fémur izquierdo medido con centímetros con un decimal.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Femur right</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El largo máximo del fémur derecho medido con centímetros con un decimal</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Abnormalities Femur</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Notas sobre anormalidades en el fémur que podrían impactar en la altura del individuo.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Notes</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Notas de relevancia como enfermedades que curso el individuo.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Date</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La fecha en la que se registraron los datos.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Signature</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La firma de quien recoleto los datos</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Hyperplasia</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Representa si existe alguna hipoplasia en el inciso o el canino con un valor verdadero, de lo contrario es falso.</p> 
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Teeth Scorable</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Indica si los dientes son puntuables o no, un diente no es puntuable cuando más de un tercio del mismo está desgastado ya que existe la posibilidad de que varias hipoplasias ya no estén presentes.</p> 
+
+                  
+                </div>                                                
+                <h5 class="text-dark">Trabajando con el dataset en Rapidminer.</h5>
+                <p class="text-dark">
+                  Dado que los datos estan en una unica tabla los exportamos a excel y los guardamos como csv, opcionalmente podríamos conectar a la base desde rapidminer con el operador la tabla de Access a Excel para el dataset utilizando el operador ReadDatabase.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/export_data.jpg" alt="" />                    
+                </div>                
+                <p class="text-dark">
+                  Luego importamos el dataset utilizando el operador ReadCSV, seteamos los tipos y el parámetro objetivo.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/import_data.jpg" alt="" />                    
+                </div>
+                <h5 class="text-dark">Análisis de parámetros.</h5>
+                <p class="text-dark">
+                  A simple vista podemos descartar varios atributos que no aportan a nuestra variable objetivo y los removemos con el operador "Select Attributes".
+                </p>  
+                <ul class="list-group list-group-bullts text-dark">
+                  <li class="list-group-item">Id - Claramente el identificador de registro no tiene relación con la altura del individuo.</li>
+                  <li class="list-group-item">Location - Todos los datos fueron encontrados en el pueblo Ribe.</li>
+                  <li class="list-group-item">Site_Number - Todos los registros están con el site number ASR1015.</li>
+                  <li class="list-group-item">Grave Number - Claramente el numero de tumba no tiene relación con la altura del individuo.</li>
+                  <li class="list-group-item">Date - Todos los datos fueron tomados en el mes de mayo del 2008, y no tiene relación con nuestra variable objetivo.</li>
+                  <li class="list-group-item">Signature - Los datos fueron recolectados por la misma persona y no tiene una relación con la variable objetivo.</li>                  
+                </ul> 
+
+                <h5 class="text-dark">Altura.</h5>
+                <p class="text-dark">
+                  En primer lugar removemos los missing values de nuestra variable objetivo y los valores 0 que representan outliers usando el operador "Filter Examples".
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/var_obj.jpg" alt="" />                    
+                </div>
+
+                <h5 class="text-dark">Sexo.</h5>
+                <p class="text-dark">
+                  Lugar separaremos los datos en 2 partes, mujeres y hombres usando los operadores "Multiply" y "Filter Examples".
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/filter_ex.jpg" alt="" />                    
+                </div>
+                <h4 class="text-dark">Hombres.</h4>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/datos_hombres.jpg" alt="" />                    
+                </div>                
+                <h5 class="text-dark">Hyperplasia - Teeth Scorable.</h5>
+                <p class="text-dark">
+                  En el caso que un diente no sea utilizable el parámetro Teeth Scorable es Falso por lo que no podría tener hyperplasia, comprobamos la congruencia de estos datos mediante una gráfica luego removemos Teeth Scorable ya que solo indica si los dientes estan o no en condiciones lo cual no se relaciona con nuestra variable objetivo.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/hyper_ts_grafica.jpg" alt="" />                    
+                </div>
+                <h5 class="text-dark">Dientes e hyperplasia.</h5>
+                <p class="text-dark">
+                  Generamos una matriz de correlación y podemos observar la relación directa entre los parámetros "Incisor Number", "Incisor largest age", "Incisor 2nd largest age", "Canine Number", "Canine largest age", "Canine 2nd largest age" y el parámetro "Hyperplasia", esto es logico ya que la evidencia para determinar si un individuo tiene o no hyperplasia se basa en la información arrojada por el esmalte de los incisivos y los caninos, finalmente nos quedaremos con el parámetro que representa si existe o no la hyperplasia.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/h_corr_mat.jpg" alt="" />                    
+                </div>
+
+                <h5 class="text-dark">Femurs</h5>
+                <p class="text-dark">
+                  Graficamos el fémur derecho e izquierdo con una gráfica de tipo scater plot y notamos que no hay outliers sino datos faltantes que se reflejan en los ejes.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/fl_fr_grafica.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  A continuación filtraremos los datos que tengan ambas medidas ( la derecha y la izquierda) y observaremos en los datos estadísticos si existe una diferencia sustancial entre ambos, para esto utilizamos el operador "Filter Examples".
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/fl_fr_filter_m.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Podemos observar que prácticamente no hay diferencia entre los datos estadísticos de ambas medidas
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/fl_fr_m.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  En base a estos datos decidimos unificar estos dos parámetros por su promedio, en el caso que existan ambos, o por uno de los dos en caso que falte el otro, para esto utilizamos el operador "Generate Attributes". 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/femur.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/femur_datos.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Finalmente para los valores faltantes del nuevo parametro los reemplazaremos por la media con el operador "Replace Missing Values".
+                </p>     
+                <h5 class="text-dark">Rango de edad</h5>
+                <p class="text-dark">
+                  No se detectan outliers, en el caso de los 3 valores faltantes de la edad máxima los reemplazaremos por el máximo del conjunto.
+                </p>
+                <h5 class="text-dark">Anormalidades</h5>
+                <p class="text-dark">
+                  Para el caso de las anormalidades en vertebras y femur los missing values representan que no se realizaron anotaciones relevantes por lo que generamos una clase none para esto.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/anormalidades_v.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/anormalidades_f.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Observamos que para los casos en los que existen anormalidades en vertebras y femur las medidas de altura no están fuera del rango y se acercan a la media del conjunto representado por los demás valores, esto indica que no hay un impacto entre las anormalidades detectadas y la altura, por lo que desestimaremos estos atributos .
+                </p>
+                <h4 class="text-dark">Gráficas.</h4>                
+                <p class="text-dark">
+                  Graficamos los parametros en base a la variable objetivo y vemos la relacion lineal entre el largo del femur y la altura del individuo.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/femur_obj.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Por otro lado se puede ver el comportamiento de los casos de hyperplasia con respecto a la variable objetivo los cuales se comportan de forma muy parecida en ambos casos.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/femur_obj.jpg" alt="" />                    
+                </div>
+
+                <h4 class="text-dark">Aplicando el modelo.</h4>
+                <p class="text-dark">
+                  Para aplicar el modelo de regresión lineal necesitamos cumplir con varios requisitos, no deben existir outliers y las variables deben ser numéricas por lo que transformaremos las nominales con el operador "Nominal to Numerical".
+                </p>
+                <p class="text-dark">
+                  A continuación realizamos una reducción de los atributos en base a un algoritmo evolutivo, con el operador "Optimize Selection (Evolutionary)", podemos observar como los parámetros de hyperplasia y rango de edad no influyen en la predicción .
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/evo.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Al aplicar el modelo podemos observar las predicciones , la ecuación de regresión lineal , el error y la correlación 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/lreg.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/error.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/corr.jpg" alt="" />                    
+                </div>
+                <h4 class="text-dark">Mujeres.</h4>
+                <p class="text-dark">
+                  Realizamos el proceso análogo para las mujeres
+                </p>
+
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/lreg_f.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/error_f.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/corr_f.jpg" alt="" />                    
+                </div>
+                <h4 class="text-dark">Rapidminer.</h4>
+                <div class="col-12 m-1">
+                    <img src="assets/images/caso1/proy.jpg" alt="" />                    
+                </div>
+                <h4 class="text-dark">Conclusiones.</h4>
+                <p class="text-dark">
+                  Si bien hay una diferencia entre las correlaciones de hombres y mujeres podemos concluir que la altura de una persona es directamente proporcional al largo del fémur.
+                  por lo tanto cuanto más largo es el fémur más alta es la persona.
+                </p>
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>
