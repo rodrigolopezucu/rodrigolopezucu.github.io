@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Support Vector Machine(SVM)</h2>
+            <div class="line-dec"></div>
+            <span>Algoritmo SVM aplicado a un dataset simple.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>                  
+                  <li><a href="assets/resources/housing.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Golf Scoring</a></li>
+                                   
+                </ul>
+                
+                <h4 class="text-dark">Problema.</h4>
+                <p class="text-dark">
+                  Se trata de un probelma de clasificacion en el cual dados los valores x1 y x2 y la ecuacion y se desea determinar si el punto esta dentro o fuera de un anillo .<br>
+                </p>
+
+                <h4 class="text-dark">Parámetros.</h4>
+                <p class="text-dark">                  
+                  Se trata de una coleccion de 200 entradas
+                </p>
+
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> x1</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Valor del punto X1.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i>x2</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Valor del punto X1.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> y</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Valor de la ecuacion para X1 y X2.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Anillo</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Nuestra variable objetivo que determina si el punto esta dentro o fuera del anillo.</p>                                   
+                </div>                                                
+                <h5 class="text-dark">Trabajando con el dataset en Rapidminer.</h5>
+                <p class="text-dark">
+                  Primero importamos el dataset utilizando el operador ReadCSV, seteamos los tipos y el parámetro objetivo.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/read_csv.jpg" alt="" />
+                </div>                
+                <p class="text-dark">
+                  Observamos las estadísticas de los datos, no hay missin values. 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/datos_estadisticas.jpg" alt="" />                    
+                </div>
+
+                <p class="text-dark">
+                  Graficamos los puntos y podemos observar claramente el anillo y que la relacion no lineal entre los parametros. 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/anillo_grafica.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  El parametro y es el valor de la ecuacion con los valores x1 y x2 por lo cual vamos a quitarlo con el operador "Select Attributes"               
+                </p>                                
+                <p class="text-dark">
+                  Para aplicar el modelo necesitamos dividir el conjunt oen 2 partes (entrenamiento y scoring) por lo que utilizamos el operador "Split Validation” que utiliza un 30 % de los valores como entrenamiento
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/split.jpg" alt="" />                    
+                </div>  
+                <p class="text-dark">
+                  Dentro del split colocamos el modelo, lo aplicamos y utilizamos un operador de performance para ver que tan bien va. 
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/split_inside.jpg" alt="" />                    
+                </div> 
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/modelo_est.jpg" alt="" />                    
+                </div>                          
+                <p class="text-dark">
+                  Podemos observar una medida de accuracy de 46,67% lo cual es muy bajo.
+                </p>  
+                <h3 class="text-dark">Configuracion de kernel.</h3>    
+                <p class="text-dark">
+                  Dentro de los parametros que podemos configurar en el modelo SVM esta el tipo de Kernel que se utiliza par medir la distancia de los puntos al hiperplano, si volvemos a los datos obtenidos de la grafica observamos que el hiperplano que separa los puntos no es una recta sino mas bien una circunferencia, por lo que el tipo de kernel mas apropiado es el polinomial. 
+                </p>  
+                <div class="col-12 m-1">
+                    <img src="assets/images/svm/modelo_est2.jpg" alt="" />                    
+                </div>                          
+                <p class="text-dark">
+                  Al ejecutar nuevamente el proceso observamos que el accuracy aumento al 100%, dejando a la vista la importancia de configurar bien nuestros modelos.
+                </p>
+
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

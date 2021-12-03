@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Naive Bayes</h2>
+            <div class="line-dec"></div>
+            <span>Algoritmo de Naive Bayes aplicado al dataset de golf.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>                  
+                  <li><a href="assets/resources/housing.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Golf Scoring</a></li>
+                                   
+                </ul>
+                
+                <h4 class="text-dark">Problema.</h4>
+                <p class="text-dark">
+                  El problema consiste en predecir si se jugara al golf dependiendo de varios parametros que representan el el estado del dia.<br>
+                </p>
+
+                <h4 class="text-dark">Parámetros.</h4>
+                <p class="text-dark">                  
+                  Se trata de una pequeña coleccion de prueba proporcionada por rapidminer de 14 entradas de training y 14 entradas de scoring
+                </p>
+
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Outlook</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Como esta el dia, soleado lluvioso,etc.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Temperature</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La temperatura en grados Fahrenheit.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Humidity</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El porcentaje de humedad.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Wind</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Si hay viento o no.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Play</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Nuestra variable objetivo la cual indica si se jugara o o no.
+                    </p>                                     
+                </div>                                                
+                <h5 class="text-dark">Trabajando con el dataset en Rapidminer.</h5>
+                <p class="text-dark">
+                  Primero arrastramos el dataset desde la carpeta de ejemplos.
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/read_csv_tr.jpg" alt="" />
+                </div>                
+                <p class="text-dark">
+                  Observamos las estadísticas de los datos, no hay outliers, pero tenemos 2 variables numericas las cuales no pueden utilizarse par aplicar este modelo, por lo tanto las convertiremos a polinomiales con el operador "Numeric to Polynomial". 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/datos_estadisticas.jpg" alt="" />                    
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/num_pol.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  A continuación utilizamos el modelo Naive Bayes, es importante seleccionar la opcion "laplace correction", ya que esta correccion evita multiplicar por 0 en los casos que la combinacion de parametros no exista, dadon como resultado una probabiliad condicional de 0. 
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/naive_lap.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Luego importamos el dataset de scoring y le aplicamos los mismos cambios 
+                </p>
+                <p class="text-dark">
+                  Finalmente Aplicamos el modelo y le añadimos un operador de performance para observamos sus estadisticas
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/proy.jpg" alt="" />                    
+                </div>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/naive/modelo_est.jpg" alt="" />                    
+                </div>                          
+                <p class="text-dark">
+                  Podemos observar una medida de accuracy de 17.43% que baja bastante en el caso de las predicciones en las que no se juega.
+                </p>      
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>

@@ -40,9 +40,9 @@
       <section class="section">
         <div class="container">
           <div class="section-heading">
-            <h2>Primeros pasos con Regresión logística</h2>
+            <h2>LDA(Linear Discriminant analysis)</h2>
             <div class="line-dec"></div>
-            <span>Aplicación del algoritmo de regresión logística con el dataset de cardiac.</span>
+            <span>Aplicación del algoritmo lda en el dataset de predicción de deportes.</span>
           </div>
           <div class="row">
             <div class="container">
@@ -55,49 +55,57 @@
                 
                 <h4 class="text-dark">Problema.</h4>
                 <p class="text-dark">
-                  El problema consiste en predecir si una persona va a tener un segundo ataque cardíaco en base a parámetros como colesterol, estrés , etc .<br>
+                  El problema consiste en predecir en que deporte se puede especializar un atleta para obtener su mejor desempeño.<br>
                 </p>
 
                 <h4 class="text-dark">Parámetros.</h4>
                 <p class="text-dark">                  
-                  Se trata de dos colección de datos una se scoring con 690 registros y una de training con 138 registros
-                </p>                  
+                  Se trata de dos colección de datos una se scoring con 1841 registros y una de training con 493 registros
+                </p>
+
                 <div class="list-group text-dark">  
                     <div class="d-flex w-100 justify-content-between">
                       <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Edad</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">La edad en años redondeada al entero más cercano.</p>
+                    <p class="mb-1 text-dark">La edad del atleta en años (con un decimal), al momento de efectuar las pruebas.</p>
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Estado_civil</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Fuerza</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">Codificado mediante un número: 0 = soltero; 1 = casado, 2 = divorciado y 3 = viudo.</p>                    
+                    <p class="mb-1 text-dark">Fortaleza del participante, medida en base a una serie de ejercicios de
+levantamiento de pesos, y expresada en una escala de 0 a 10. Ningún participante obtuvo 8, 9 0 10 en pero algunos obtuvieron 0.</p>                    
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Sexo</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Velocidad</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">El sexo del individuo, 0 = femenino; 1= masculino.</p>                    
+                    <p class="mb-1 text-dark">Rendimiento del participante en un test de velocidad de respuesta. Una escala de 0 a 6 que mide la velocidad de respuesta a distintos test.</p>                    
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Categoria_Peso</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Lesiones</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">El peso de la persona, categorizado en uno de tres posibles niveles: 0 = normal; 1 = sobrepeso; 2 = obeso.</p>                    
+                    <p class="mb-1 text-dark">Indica si el atleta ha sufrido previamente alguna lesión que fuera suficientemente severa como para requerir cirugía
+u otra intervención médica importante.</p>                    
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Colesterol</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Visión</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">Nivel de colesterol de la persona, tal como se ha registrado en el momento del tratamiento indicado cuando su más reciente ataque al corazón
-</p>                    
+                    <p class="mb-1 text-dark">Se evalua en una escala de 0 a 4 con el test habitual de escala de visión 20/20 y una tecnica que mide la capacidad de seguimiento de los movimientos oculares para determinar qué tan bien los atletas podían seguir visualmente objetos.
+                    </p>                    
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Manejo_stress</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Resistencia</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">Un atributo binario que indica si el paciente ha participado previamente de cursos de manejo del estrés: 0 = no; 1 = si.             
+                    <p class="mb-1 text-dark">El rendimiento fisico evaluado en una escala de 0 a 10.             
                     </p>
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Trat_ansiedad</h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Agilidad</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">Valor entre 0 y 100 indicativo del nivel de estrés de cada persona ,los valores están tabulados en incrementos de 5.<br>                    
+                    <p class="mb-1 text-dark">Calificación del participante en una escala de 0 a 100 que mide de su habilidad para moverse, girar, saltar, cambiar dirección, etc             
                     </p>
                     <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> 2do_Ataque_Corazon </h5>                      
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Capacidad de Decisión</h5>                      
                     </div>
-                    <p class="mb-1 text-dark">Es la variable objetivo, "SI" para aquellos individuos que han sufrido un segundo ataque al corazón, "no" en caso contrario.<br>
+                    <p class="mb-1 text-dark">Evalúala capacidad del atleta para decidir qué hacer en diferentes situaciones atléticas en una escala de 0 a 100.<br>                    
+                    </p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1"><i class="fa fa-tag" aria-hidden="true"></i> Deporte Primario </h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">Es la variable objetivo, indica en qué deporte se especializó cada uno de los atletas luego de dejar la academia.<br>
                     </p>                                       
                 </div>                                                
                 <h5 class="text-dark">Trabajando con el dataset en Rapidminer.</h5>
@@ -105,44 +113,44 @@
                   Primero importamos el dataset de entrenamiento, utilizando el operador ReadCSV, seteamos los tipos y el parámetro objetivo.
                 </p>
                 <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/read_csv_tr.jpg" alt="" />
+                    <img src="assets/images/lda/read_csv_tr.jpg" alt="" />
                 </div>                
                 <p class="text-dark">
-                  Observamos las estadísticas de los datos, destacamos que es un dataset curado por lo que no observamos missing values, las distribuciones de los atributos se asemejan bastante a la distribución normal. 
+                  Observamos las estadísticas de los datos, no hay outliers. 
                 </p>
                 <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/datos_estadisticas.jpg" alt="" />                    
+                    <img src="assets/images/lda/datos_estadisticas.jpg" alt="" />                    
                 </div>
                 <p class="text-dark">
-                  A continuación utilizamos el modelo de regresión logística mediante el operador "Logistic Regression", si conectamos la salida del modelo y ejecutamos el proyecto podemos observar los coeficientes y estadísticas del modelo entrenado.
+                  A continuación utilizamos el modelo LDA ya que la variable objetivo tiene multiples clases, para esto necesitamos estandarizar los valores y trabajar con los outliers. 
                 </p>
-                <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/modelo_estadisticas.jpg" alt="" />                    
-                </div>
-
                 <p class="text-dark">
-                  Podemos apreciar que el estado civil y la categoría están generando un problema, esto puede deberse a que las variables son nominales por lo que las transformaremos a categóricas y luego aplicaremos One-Hot encoding para poder utilizarlas en nuestro modelo y observamos las nuevas estadísticas  
+                  Podemos apreciar que el atributo capacidad de Decision tiene datos que salen del rango especificado, en las priebas se revelo que los atletas no obtuvieron menos de 3 ni mas de 100 en este test por lo que necesitaremos corregir estos datos, en el caso de los que exceden la medida los dejaremos en el maximo y en el caso contrario en el minimo.   
                 </p>
                 <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/modelo_estadisticas2.jpg" alt="" />                    
+                    <img src="assets/images/lda/generate.jpg" alt="" />                    
                 </div>
 
                 <p class="text-dark">
-                    Ya estamos listos para aplicar el modelo con los datos de scoring, asi que los importamos y aplicamos el modelo con "Apply Model", es importante generar los cambios que hicimos en el dataset de entrenamiento en el dataset de scoring.
+                    Para aplicar el modelo necesitaremos que los parametros esten normalizados por lo que utilizaremos el operador Normalize.
                 </p>
                 <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/proyecto.jpg" alt="" />                    
+                    <img src="assets/images/lda/normal.jpg" alt="" />                    
                 </div>
+                <p class="text-dark">
+                  Luego importamos el dataset de scoring y le aplicamos los mismos cambios 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/lda/proy.jpg" alt="" />                    
+                </div>                                
 
                 <p class="text-dark">
-                  Corremos el proyecto y observamos que se generaron 2 atributos nuevos que representan la confianza de la predicción
+
+                  Aplicamos el modelo y observamos sus estadisticas
                 </p>
                 <div class="col-12 m-1">
-                    <img src="assets/images/regresion_logistica/res.jpg" alt="" />                    
-                </div>                
-                <p class="text-dark">
-                  Podemos concluir que el grado de predicción es muy bueno, pero hay que prestar especial atención a los falsos negativos ya que en estos casos los pacientes no recibirían los cuidados necesarios para prevenir el verdadero resultado que los llevaría a un 2do ataque cardíaco, en el caso de los falsos negativos el cuidado de los pacientes seria innecesario pero aun así sobrevivirían.
-                </p>
+                    <img src="assets/images/lda/modelo_est.jpg" alt="" />                    
+                </div>                                
               </div>
             </div>            
         </div>
