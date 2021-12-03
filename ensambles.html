@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Portafolio UCU" />
+    <meta name="author" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <title>Portafolio UCU</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />        
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/perfil.jpg" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Rodrigo López</h4>
+              <span>Universidad Católica</span>              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="index.html#section1">Quien soy ?</a></li>                
+                <li><a href="index.html#section3">Inteligencia Artificial</a></li>
+                <li><a href="index.html#section4">Contacto</a></li>
+              </ul>
+            </nav>                        
+          </div>
+        </div>
+      </div>      
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>ensambles Bayes</h2>
+            <div class="line-dec"></div>
+            <span>Algoritmo de ensambles Bayes aplicado al dataset de golf.</span>
+          </div>
+          <div class="row">
+            <div class="container">
+              <div class="bg-light p-3">                                
+                <h4 class="text-dark">Recursos</h4>
+                <ul>                  
+                  <li><a href="assets/resources/housing.csv" target="_blank" download><i class="fa fa-database" aria-hidden="true"></i>Golf Scoring</a></li>
+                                   
+                </ul>
+
+                
+                <h4 class="text-dark">Problema.</h4>
+                <p class="text-dark">
+                  El problema consiste en predecir la clase de iris que tiene una planta .<br>
+                </p>
+
+                <p class="text-dark">
+                  Utilizaremos el dataset de IRIS proporcionado por UCI.<br>
+                  Se trata de una coleccion de datos recolectados sobre el genero de plantas "Iris", el mismo esta compuesto por 150 registros divididos en 3 clases de planta distintos, por cada clase existen 50 registros con los siguientes parámetros.<br>
+                </p>  
+                <div class="list-group text-dark">  
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Sepal length</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La longitud del sépalo medida en centímetros.</p>
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Sepal width</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El ancho del sépalo medido en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Petal length</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La longitud del pétalo medida en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Petal width</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">El ancho del pétalo medido en centímetros.</p>                    
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Class</h5>                      
+                    </div>
+                    <p class="mb-1 text-dark">La clase Iris a la que pertenece la planta.<br>
+                    -Iris Setosa<br>
+                    -Iris Versicolour<br>
+                    -Iris Virginica 
+                    </p>
+                </div> 
+
+                <h5 class="text-dark">Votación.</h5>
+                <p class="text-dark">
+                  Se basa en aplicar distintos algoritmos y realizar una votación para lograr el mejor resultado
+                </p>                                                
+                <p class="text-dark">
+                  A continuación utilizamos el operador "Split Validation" para separar el dataset en entrenamiento y scoring y poder medir la performance de método que aplicaremos. 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/read_csv_val.jpg" alt="" />
+                </div>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/ensambles_lap.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Dentro del operador Validation agregamos el operador "Vote" que aplicara varios modelos y generara una votación para obtener el mejor resultado, del lado derecho aplicaremos el modelo con el operador Apply Model y mediremos la performance con el operador Performance para clasificación 
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/vote.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Dentro del operador Vote agregamos los algoritmos que utilizaremos 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/vote_inside.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Ejecutamos el proyecto y en la salida podemos observar los resultados de los modelos y el cuadro de performance 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/m1.jpg" alt="" />
+                    <img src="assets/images/ensambles/m2.jpg" alt="" />
+                    <img src="assets/images/ensambles/m3.jpg" alt="" />
+                    <img src="assets/images/ensambles/voto_est.jpg" alt="" />                    
+                </div>                          
+                <p class="text-dark">
+                  Podemos observar una medida de accuracy muy alta del 97.78%, solo falla en 1 ocasión.
+                </p>
+
+                <h5 class="text-dark">Bagging.</h5>
+                <p class="text-dark">
+                  Se aplica boostraping y agregation, a partir de un conjunto de datos se generan n conjuntos aleatorios con repeticion, luego se les aplica el modelo y finalmente se consolida el resultado  
+                </p>
+                <p class="text-dark">
+                  A continuación utilizamos el operador "Split Validation" para separar el dataset en entrenamiento y scoring y poder medir la performance. 
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/read_csv_val.jpg" alt="" />
+                </div>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/ensambles_lap.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Dentro del operador Validation agregamos el operador "Bagging" , del lado derecho aplicaremos el modelo con el operador Apply Model y mediremos la performance con el operador Performance para clasificación 
+                </p>                
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/bagging.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Dentro del operador Bagging agregamos el algoritmo que utilizaremos  
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/bagging_inside.jpg" alt="" />                    
+                </div>
+                <p class="text-dark">
+                  Ejecutamos el proyecto y en la salida podemos observar los los 10 modelos que se generaron en base al parámetro iterations del operador bagging
+                </p>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/bag_modelos.jpg" alt="" />
+                </div>
+                <div class="col-12 m-1">
+                    <img src="assets/images/ensambles/bag_est.jpg" alt="" />
+                </div                          
+                <p class="text-dark">
+                  Podemos observar una medida de accuracydel 91.11%, menor que el obtenido con el método anterior.
+                </p>
+
+              </div>
+            </div>            
+        </div>
+      </section>      
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>
